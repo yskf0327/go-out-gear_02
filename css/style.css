@@ -180,7 +180,7 @@ nav ul li a {
 
 .cat-item:nth-of-type(5) {
   background-image: url(../img/img_category05.jpg);
-  background-position: center top;
+  background-position: center center;
   background-size: contain;
 }
 
