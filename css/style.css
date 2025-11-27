@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+/* 
+main: #2E4A34
+accent: #C46B45
+bg: #F9F8F4
+
+*/
+
+/* 共通
+-------------------------------- */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  color: #2b2b2b;
+  line-height: 1;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* レイアウト
+-------------------------------- */
+.wrapper {
+  width: 92%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 見出し
+-------------------------------- */
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 89px;
+}
+
+/* button
+-------------------------------- */
+.btn {
+  display: inline-block;
+  background-color: #C46B45;
+  padding: 13px 21px;
+  color: #F9F8F4;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+
+/* ヘッダー
+-------------------------------- */
+header {
+  background-color: #2E4A34;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 21px;
+  padding: 21px 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 34px;
+}
+
+nav ul li a {
+  color: #ffffff;
+}
+
+.logo {
+  /* width: 143px; */
+  width: 41%;
+  aspect-ratio: 143 / 24;
+  max-width: 380px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+/* メインビジュアル */
+.mv {
+  background-image: url(../img/mainvisual.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 600px;
+}
+
+.mv-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 33px;
+}
+
+.catchcopy {
+  color: #F9F8F4;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.catchcopy-en {
+  font-size: 36px;
+}
+
+.catchcopy-ja {
+  font-size: 24px;
+}
+
+/* About
+-------------------------------- */
+.about {
+  padding: 144px 0 89px;
+}
+
+.about-text {
+  max-width: 450px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Products
+-------------------------------- */
+.products {
+  padding: 89px 0;
+}
+
+.cat-list {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 33px;
+}
+
+.cat-item {
+  aspect-ratio: 5 / 4;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cat-item:nth-of-type(1) {
+  background-image: url(../img/img_category01.jpg);
+  background-position: center 60%;
+}
+
+.cat-item:nth-of-type(2) {
+  background-image: url(../img/img_category02.jpg);
+  background-position: center 60%;
+}
+
+.cat-item:nth-of-type(3) {
+  background-image: url(../img/img_category03.jpg);
+  background-position: center 60%;
+}
+
+.cat-item:nth-of-type(4) {
+  background-image: url(../img/img_category04.jpg);
+  background-position: center 60%;
+}
+
+.cat-item:nth-of-type(5) {
+  background-image: url(../img/img_category05.jpg);
+  background-position: center top;
+  background-size: contain;
+}
+
+.cat-item:nth-of-type(6) {
+  background-image: url(../img/img_category06.jpg);
+  background-position: center 60%;
+}
+
+.cat-item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+}
+
+.cat-item a span {
+  display: inline-block;
+  background-color: #fff;
+  padding: 13px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Access
+-------------------------------- */
+.access {
+  padding: 89px 0 144px;
+}
+
+.access-map {
+  height: 250px;
+  margin-bottom: 55px;
+}
+
+.access-map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.access-shop-name {
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 34px;
+}
+
+.access-info {
+  line-height: 1.8;
+}
+
+.access-info-item {
+  display: flex;
+  gap: 16px;
+}
+
+.access-info-item+.access-info-item {
+  margin-top: 21px;
+}
+
+
+.access-info-item dt {
+  flex-basis: 73.75px;
+  flex-shrink: 0;
+}
+
+.access-info-item dd {
+  flex-grow: 1;
+}
+
+/* footer
+-------------------------------- */
+footer {
+  background-color: #2E4A34;
+  text-align: center;
+  padding: 21px 0;
+}
+
+footer .copyright {
+  color: #F9F8F4;
+  font-size: 16px;
+}
+
+/* デスクトップ版
+-------------------------------- */
+@media screen and (min-width:768px) {
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  .mv {
+    background-position: center 70%;
+  }
+
+  .catchcopy {
+    gap: 33px;
+  }
+
+  .catchcopy-en {
+    font-size: 64px;
+  }
+
+  .catchcopy-ja {
+    font-size: 36px;
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 21px 33px;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  .cat-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
