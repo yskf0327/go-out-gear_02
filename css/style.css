@@ -23,7 +23,9 @@ img {
 /* レイアウト
 -------------------------------- */
 .wrapper {
+  /* コンテンツ幅が1000px未満のときの設定 */
   width: 92%;
+  /* コンテンツの最大幅 */
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -33,9 +35,11 @@ img {
 .section-title {
   font-size: 32px;
   font-weight: bold;
+  /* 文字間隔10%を反映 */
   letter-spacing: 0.1em;
   color: #000000;
   text-align: center;
+  /* アルファベットをすべて大文字で表示 */
   text-transform: uppercase;
   margin-bottom: 89px;
 }
@@ -97,12 +101,15 @@ nav ul li a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  /* 全幅表示 */
   width: 100%;
+  /* 高さ固定 */
   height: 600px;
 }
 
 .mv-inner {
   height: 100%;
+  /* キャッチコピーとボタン全体のレイアウト */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,6 +122,7 @@ nav ul li a {
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  /* キャッチコピーのレイアウト */
   display: flex;
   flex-direction: column;
   gap: 13px;
@@ -135,6 +143,7 @@ nav ul li a {
 }
 
 .about-text {
+  /* 最大幅を指定して読みやすい横幅に制御 */
   max-width: 450px;
   margin: 0 auto;
   line-height: 1.8;
@@ -147,36 +156,38 @@ nav ul li a {
 }
 
 .cat-list {
+  /* PC版でGridにするのでSP版で先に設定しておく */
   display: grid;
-  grid-template-columns: auto;
-  gap: 33px;
+  /* 1列の指定 */
+  grid-template-columns: 1fr;
+  row-gap: 33px;
 }
 
 .cat-item {
   text-align: center;
 }
 
-.cat-item img {
-  aspect-ratio: 4 / 3;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .cat-item a {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  display: block;
   height: 100%;
   width: 100%;
 }
 
-.cat-item a span {
-  display: inline-block;
-  background-color: #fff;
+.cat-item a p {
   padding: 13px 0;
   font-size: 20px;
   font-weight: bold;
+}
+
+.cat-item-img {
+  /* 要素の縦横比を指定するプロパティ */
+  aspect-ratio: 4 / 3;
+}
+
+.cat-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Access
@@ -206,6 +217,7 @@ nav ul li a {
 }
 
 .access-info-item {
+  /* dtとddを横並びにするためのdiv */
   display: flex;
   gap: 16px;
 }
