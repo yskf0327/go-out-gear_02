@@ -1,18 +1,28 @@
 @charset "UTF-8";
 
-/* 
-カラーコード
-main: #2E4A34
-accent: #C46B45
-bg: #F9F8F4
-*/
+:root {
+  /* color */
+  --color-black: #2b2b2b;
+  --color-green: #2e4a34;
+  --color-orange: #c46b45;
+  --color-bg: #f9f8f4;
+
+  /* space */
+  --s-xs: 8px;
+  --s-s: 13px;
+  --s-md: 21px;
+  --s-lg: 34px;
+  --s-xl: 55px;
+  --s-2xl: 89px;
+  --s-3xl: 144px;
+}
 
 /* 共通
 -------------------------------- */
 body {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
-  color: #2b2b2b;
+  color: var(--color-black);
   line-height: 1;
 }
 
@@ -41,16 +51,16 @@ img {
   text-align: center;
   /* アルファベットをすべて大文字で表示 */
   text-transform: uppercase;
-  margin-bottom: 89px;
+  margin-bottom: var(--s-xl);
 }
 
 /* button
 -------------------------------- */
 .btn {
   display: inline-block;
-  background-color: #C46B45;
-  padding: 13px 21px;
-  color: #F9F8F4;
+  background-color: var(--color-orange);
+  padding: var(--s-s) var(--s-md);
+  color: var(--color-bg);
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 8px;
@@ -62,20 +72,20 @@ img {
 /* ヘッダー
 -------------------------------- */
 header {
-  background-color: #2E4A34;
+  background-color: var(--color-green);
 }
 
 .header-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 21px;
-  padding: 21px 0;
+  gap: var(--s-md);
+  padding: var(--s-md) 0;
 }
 
 nav ul {
   display: flex;
-  gap: 34px;
+  gap: var(--s-lg);
 }
 
 nav ul li a {
@@ -114,18 +124,18 @@ nav ul li a {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 33px;
+  gap: var(--s-lg);
 }
 
 .catchcopy {
-  color: #F9F8F4;
+  color: var(--color-bg);
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   /* キャッチコピーのレイアウト */
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: var(--s-s);
 }
 
 .catchcopy-en {
@@ -136,12 +146,23 @@ nav ul li a {
   font-size: 24px;
 }
 
-/* About
+/* section共通
 -------------------------------- */
-.about {
-  padding: 144px 0 89px;
+section {
+  padding: var(--s-2xl) 0;
 }
 
+section:first-of-type {
+  padding: var(--s-3xl) 0 var(--s-2xl);
+}
+
+section:last-of-type {
+  padding: var(--s-2xl) 0 var(--s-3xl);
+}
+
+
+/* About
+-------------------------------- */
 .about-text {
   /* 最大幅を指定して読みやすい横幅に制御 */
   max-width: 450px;
@@ -152,7 +173,7 @@ nav ul li a {
 /* Products
 -------------------------------- */
 .products {
-  padding: 89px 0;
+  padding: var(--s-2xl) 0;
 }
 
 .cat-list {
@@ -160,7 +181,7 @@ nav ul li a {
   display: grid;
   /* 1列の指定 */
   grid-template-columns: 1fr;
-  row-gap: 33px;
+  row-gap: var(--s-lg);
 }
 
 .cat-item {
@@ -174,7 +195,7 @@ nav ul li a {
 }
 
 .cat-item a p {
-  padding: 13px 0;
+  padding: var(--s-s) 0;
   font-size: 20px;
   font-weight: bold;
 }
@@ -193,12 +214,12 @@ nav ul li a {
 /* Access
 -------------------------------- */
 .access {
-  padding: 89px 0 144px;
+  padding: var(--s-2xl) 0 var(--s-3xl);
 }
 
 .access-map {
   height: 250px;
-  margin-bottom: 55px;
+  margin-bottom: var(--s-xl);
 }
 
 .access-map iframe {
@@ -209,7 +230,7 @@ nav ul li a {
 .access-shop-name {
   font-weight: bold;
   font-size: 32px;
-  margin-bottom: 34px;
+  margin-bottom: var(--s-lg);
 }
 
 .access-info {
@@ -223,12 +244,13 @@ nav ul li a {
 }
 
 .access-info-item+.access-info-item {
-  margin-top: 21px;
+  margin-top: var(--s-md);
 }
 
 
 .access-info-item dt {
   flex-basis: 73.75px;
+  /* flex-shrinkを0にしてアイテムサイズを固定 */
   flex-shrink: 0;
 }
 
@@ -239,13 +261,13 @@ nav ul li a {
 /* footer
 -------------------------------- */
 footer {
-  background-color: #2E4A34;
+  background-color: var(--color-green);
   text-align: center;
-  padding: 21px 0;
+  padding: var(--s-md) 0;
 }
 
 footer .copyright {
-  color: #F9F8F4;
+  color: var(--color-bg);
   font-size: 16px;
 }
 
@@ -274,7 +296,7 @@ footer .copyright {
   }
 
   .catchcopy {
-    gap: 33px;
+    gap: var(--s-lg);
   }
 
   .catchcopy-en {
@@ -287,7 +309,7 @@ footer .copyright {
 
   .btn {
     font-size: 20px;
-    padding: 21px 33px;
+    padding: var(--s-md) var(--s-lg);
   }
 
   .section-title {
@@ -295,8 +317,8 @@ footer .copyright {
   }
 
   .cat-list {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 24px;
-    row-gap: 33px;
+    row-gap: var(--s-lg);
   }
 }
