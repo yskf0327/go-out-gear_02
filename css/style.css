@@ -11,7 +11,7 @@ bg: #F9F8F4
 -------------------------------- */
 body {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #2b2b2b;
   line-height: 1;
 }
@@ -252,6 +252,10 @@ footer .copyright {
 /* デスクトップ版
 -------------------------------- */
 @media screen and (min-width:768px) {
+  body {
+    font-size: 18px;
+  }
+
   .header-inner {
     flex-direction: row;
     justify-content: space-between;
